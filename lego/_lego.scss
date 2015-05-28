@@ -13,7 +13,7 @@
 		$fontColor: #ec185b,			// 头部字体色
 		$fontSize: 20px,				// 头部字体大小
 		$position: relative,			// 头部位置
-		$bdbottom: solid 1px #ddd,		// 头部底部边框样式
+		$bdbottom: solid 1px #ddd,		// 头部底边框样式
 		// 右边图标
 		$rightIcon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAOElEQVQoU2N8JR69hYmRwZuBRPDvP8NWRoo0k2ghinLGkaiZ7NBm+LdtNKpITDGUpTCyo4rSXAUA0zkecQZhEbEAAAAASUVORK5CYII='
 	){
@@ -82,7 +82,7 @@
 		$shapeRadius: 50%,					// 列表定义形状圆角
 		$shapeBgColor: #ec185b,				// 列表定义形状背景色
 		$shapeFontColor: #fff,				// 列表定义形状字体色
-		$headerBgColor: rgb(245,245,245),	// 列表头部背景色
+		$headerBgColor: #f5f5f5,			// 列表头部背景色
 		$headerfontColor: #333				// 列表头部字体颜色
 	){
 	width: 100%;
@@ -193,9 +193,9 @@
 /* @name: 表单样式 */
 @mixin ui-form(
 		$height: 50px,							// 表单单行高度
-		$border: solid 1px rgb(245,245,245),	// 表单间隔颜色
+		$border: solid 1px #f5f5f5,				// 表单间隔颜色
 		$labelWidth: 70px,						// 表单标识宽度
-		$headerBgColor: rgb(245,245,245),		// 表单头部背景色
+		$headerBgColor: #f5f5f5,				// 表单头部背景色
 		$headerFontColor: #333					// 表单头部字体颜色
 	){
 	width: 100%;
@@ -426,8 +426,7 @@
 }
 
 /* @name: 提示框 */
-@mixin ui-window(
-	){
+@mixin ui-window(){
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -468,7 +467,7 @@
 			width: 100%;
 			height: 40px;
 			line-height: 40px;
-			border-top: solid 1px rgb(245,245,245);
+			border-top: solid 1px #f5f5f5;
 		}
 		.ui-windowCon__fbtn{
 			float: left;
@@ -480,7 +479,7 @@
 			font-weight: bold;
 			font-size: 15px;
 			&:first-child{
-				border-right: solid 1px rgb(245,245,245);
+				border-right: solid 1px #f5f5f5;
 			}
 		}
 	}
