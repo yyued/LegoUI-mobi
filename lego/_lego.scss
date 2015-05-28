@@ -1,1 +1,487 @@
-//
+/*!
+ * @project : LegoUI-mobi
+ * @version : 1.0.0
+ * @author  : 
+ * @update  : 2015-05-28 9:05:52 am
+ */
+
+/* @name: 头部样式 */
+@mixin ui-header(
+		$width: 100%,					// 头部宽度
+		$height: 50px,					// 头部高度
+		$bgColor: #fff,					// 头部背景色
+		$fontColor: #ec185b,			// 头部字体色
+		$fontSize: 20px,				// 头部字体大小
+		$position: relative,			// 头部位置
+		$bdbottom: solid 1px #ddd,		// 头部底部边框样式
+		// 右边图标
+		$rightIcon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAOElEQVQoU2N8JR69hYmRwZuBRPDvP8NWRoo0k2ghinLGkaiZ7NBm+LdtNKpITDGUpTCyo4rSXAUA0zkecQZhEbEAAAAASUVORK5CYII='
+	){
+	display: block;
+	position: relative;
+	width: $width;
+	height: $height;
+	line-height: $height;
+	text-align: center;
+	background-color: $bgColor;
+	color: $fontColor;
+	font-size: $fontSize;
+	border-bottom: $bdbottom;
+	.ui-header__left{
+		position: absolute;
+		margin: auto;
+		left: 0;
+		top: 0;
+		width: 40px;
+		height: $height;
+		overflow: hidden;
+		&:before{
+			position: absolute;
+			top: $height / 2 - 3;
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 12px;
+			height: 2px;
+			content: "";
+			background-color: $fontColor;
+			transform:rotate(-45deg);
+		}
+		&:after{
+			position: absolute;
+			top: $height / 2 + 4;
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 12px;
+			height: 2px;
+			content: "";
+			background-color: $fontColor;
+			transform:rotate(45deg);
+		}
+	}
+	.ui-header__right{
+		position: absolute;
+		margin: auto;
+		right: 0;
+		top: 0;
+		width: 40px;
+		height: $height;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url($rightIcon);
+	}
+}
+
+/* @name: 列表样式 */
+@mixin ui-list(
+		$height: 40px,						// 列表单行高度
+		$shapeWidth: 20px,					// 列表定义形状宽度
+		$shapeHeight: 20px,					// 列表定义形状高度
+		$shapeRadius: 50%,					// 列表定义形状圆角
+		$shapeBgColor: #ec185b,				// 列表定义形状背景色
+		$shapeFontColor: #fff,				// 列表定义形状字体色
+		$headerBgColor: rgb(245,245,245),	// 列表头部背景色
+		$headerfontColor: #333				// 列表头部字体颜色
+	){
+	width: 100%;
+	overflow: hidden;
+	.ui-list__header{
+		padding: 0 10px;
+		width: 100%;
+		height: $height + 5;
+		line-height: $height + 5;
+		font-size: 14px;
+		font-weight: bold;
+		color: $headerfontColor;
+		background-color: $headerBgColor;
+	}
+	ul{
+		width: 100%;
+		overflow: hidden;
+		li{
+			position: relative;
+			padding: 0 10px;
+			width: 100%;
+			height: $height;
+			line-height: $height;
+			border-bottom: solid 1px rgba(245,245,245,1);
+			@include ellipsis();
+		}
+		li:last-child{
+			border-bottom: none;
+		}
+	}
+	.ui-list__arrow{
+		padding: 0 30px 0 10px;
+		&:before{
+			position: absolute;
+			top: $height / 2 - 3;
+			right: 10px;
+			margin: auto;
+			width: 12px;
+			height: 2px;
+			content: "";
+			background-color: #ddd;
+			transform:rotate(45deg);
+		}
+		&:after{
+			position: absolute;
+			top: $height / 2 + 4;
+			right: 10px;
+			margin: auto;
+			width: 12px;
+			height: 2px;
+			content: "";
+			background-color: #ddd;
+			transform:rotate(-45deg);
+		}
+	}
+	.ui-list__shape{
+		padding: 0 $shapeHeight+15 0 10px;
+		._shape{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 10px;
+			margin: auto;
+			width: $shapeWidth;
+			height: $shapeHeight;
+			line-height: $shapeHeight;
+			text-align: center;
+			border-radius: $shapeRadius;
+			color: $shapeFontColor;
+			background-color: $shapeBgColor;
+		}
+	}
+}
+
+/* @name: 按钮样式 */
+@mixin ui-btn(
+		$width: 100%, 			// 按钮宽度
+		$height: 40px, 			// 按钮高度
+		$paddingLR: 10px, 		// 按钮左右间距
+		$border: none, 			// 按钮边框
+		$bgColor: #ec185b, 		// 按钮背景色
+		$fontColor: #fff, 		// 按钮字体色
+		$radius: 3px			// 按钮圆角
+	){
+	display: block;
+	padding: 0 $paddingLR;
+	width: $width;
+	height: $height;
+	line-height: $height;
+	text-align: center;
+	text-decoration: none;
+	color: $fontColor;
+	font-size: 15px;
+	overflow: hidden;
+	outline: none;
+	&:after{
+		display: block;
+		margin-top: - $height;
+		width: 100%;
+		height: 100%;
+		background-color: $bgColor;
+		border: $border;
+		border-radius: $radius;
+		content: "";
+	}
+}
+
+/* @name: 表单样式 */
+@mixin ui-form(
+		$height: 50px,							// 表单单行高度
+		$border: solid 1px rgb(245,245,245),	// 表单间隔颜色
+		$labelWidth: 70px,						// 表单标识宽度
+		$headerBgColor: rgb(245,245,245),		// 表单头部背景色
+		$headerFontColor: #333					// 表单头部字体颜色
+	){
+	width: 100%;
+	overflow: hidden;
+	.ui-form__header{
+		padding: 0 10px;
+		width: 100%;
+		height: $height + 5;
+		line-height: $height + 5;
+		font-size: 14px;
+		font-weight: bold;
+		color: $headerFontColor;
+		background-color: $headerBgColor;
+		border-bottom: $border;
+	}
+	.ui-form__space{
+		margin-top: 10px;
+		border-top: $border;
+	}
+	.ui-form__group,
+	.ui-form__group2{
+		position: relative;
+		width: 100%;
+		height: $height;
+		border-bottom: $border;
+		input[type=text],
+		input[type=password]{
+			margin: ($height / 2 - 10) 0;
+			padding: 0 10px;
+			width: 100%;
+			height: 20px;
+			line-height: 20px;
+			border: none;
+			-webkit-tap-highlight-color:rgba(0,0,0,0);
+		}
+	}
+	.ui-form__group2{
+		label{
+			position: absolute;
+			padding: 0 10px;
+			width: $labelWidth;
+			height: $height;
+			line-height: $height;
+			overflow: hidden;
+		}
+		input[type=text],
+		input[type=password]{
+			padding-left: $labelWidth;
+		}
+	}
+}
+
+/* @name: 开关样式 */
+@mixin ui-switch(
+		$width: 55px,			// 开关宽度
+		$height: 30px,			// 开关高度
+		$bgColor: blue			// 开关背景色
+	){
+	position: relative;
+	width: $width;
+	height: $height;
+	margin-top: 5px;
+	margin-left: 10px;
+	outline: none;
+	border: solid 1px #eee;
+	border-radius: $height / 2;
+	input[type=checkbox]{
+		opacity: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		width: 100px;
+		z-index: 10;
+		outline: none;
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+  		-webkit-appearance: none;
+	}
+	.ui-switch__btn{
+		position: absolute;
+		width: $height + 1;
+		height: $height + 1;
+		left: -1px;
+		top: -1px;
+		border-radius: 50%;
+		background-color: #fff;
+		content: "";
+		z-index: 3;
+		border: solid 1px #eee;
+		box-shadow: 0px 0px 8px #999;
+		transition: left 0.1s;
+		outline: none;
+	}
+	.ui-switch__lbl{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		border-radius: $height / 2;
+		z-index: 1;
+		outline: none;
+		&:before{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 0%;
+			height: 100%;
+			background-color: $bgColor;
+			content: "";
+			border-radius: $height / 2;
+			transition: width 0.1s;
+		}
+	}
+
+	input[type=checkbox]:checked + .ui-switch__btn{
+		left: $width - $height - 2;
+	}
+	input[type=checkbox]:checked ~ .ui-switch__lbl:before{
+		width: 100%;
+	}
+}
+
+/* @name: 单选样式 */
+@mixin ui-radio(
+		$width: 100%,			// 单选宽度
+		$height: 50px,			// 单选高度
+		$labelWidth: 50px,		// 单选图标宽度
+		// 默认图片链接地址
+		$defImg: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAD/UlEQVRYR9VZTWwbRRT+3ux6t+skdo0tDmkSIm9MiMKNIHoNNyTEpaKtKCeE1EBbzs2BHkCi3EtFihAnoFS0FwRXcgSJcIIohHg3ISk5QFyTX3fXuzNonN3IceI4ThzbnZPlnXnzzXtv3s83hCMMIQRbWFh4kXM+CmAEwLMAzgDoCMRtAvgbwJ8Aphhjk/39/b8QEa93O6pnwdzcXA9j7AqAS6pCvZoKRFSCqhAYI1AgTQiAcwHPFyh6Aq4H+XsJwFec89uZTObhYfc9FMCZmZmkpmkfEOFtQyfN0FgJVD1Dgi24HAVHuELgc9d1bwwNDeVqyai5i23b54UQt6M6pToMBazmioO35ALYLPjYcsSKEOLqwMDAvYNWVN1ucnJS7evru6UwjMU7lJIpGzmKvsDqhg+fY2JxcfHa6Oiot5/8fXddXl6OFgqFe3qEXpXgQt9qJEApS/rq6qYPpyi+NwzjQnd391blHnsASs319vY+MHT2mgTXjCFBFhz+3dLS0rlKTe4BaFnWhB6hy/FOBY01avWjCqBkbqco7pimOVY+cxeGbDZ7QVXom2RMPTGzVoMpzZ1b86RPvmGa5t1w3g7AIJT88VRMSUXqDCGNcgN5cR6t+Y84589lMpl/pdwdgJZlfRrVaawr2hy/q3ao9a1SCNoxdQmgZVl9RMim4mrkuHHuuNqUcXJl1SsKgQHTNBdDgDejOl1vtfbCw63LQP5YfGya5jjJxG/b9l/JmNJTb/o6rraqrZdpMbfmP0yn08/Q/Pz8S4zEz8lYa32vEmxuzQcXdJYsyxqP6vRRu5h3x8zbl2VcArwf72DnTmnspCx2JLmPXY7VTf5AAvwtGVOebxf/C08T+OHvZNv2SiquJFsdXirVvB1u/JzUoPN0QtWalXcPa2+Zn//Je277A3wSTNzel+RJCDPtGai38/G4THVnGYmf2jbVtX2xENSDN6On6HqX0R4Fw65ySwKUlIaiMCsVV7VWZ5SgYHV9n5uSIikv+SV78G6rq5qg5J8wTfOdXT2JbJp0XZ9NdLFkK5um/DrPOY4zGPI2lW3nRVWhuy1uOy+Zpvn1nrYz/CNs3E93NvfC/LfhS5rus3Q6fblq4y4/TE9Pa7quf9sK6sNxnNeHh4fdAwHKjwF5dF+P0CtNIo9+MAzj/KHIoxD91NRUJJFISPqtxNM0+uKU0W938vn8tZGRkeJ+tWLNOjWbzV4kolsnQWACeK+chzkSQLlodnY2parqh0R4q0EU8Bee570/ODi4UqvCrqnBcgEBiX4VwJuqQmcqSfQwC8lssA+JLln/LznnnzScRK88ZdkzxMsAXgieIXoAdAZzNwBIJl8+Q/zKGPvxqM8Q/wPCASaRgMFQtgAAAABJRU5ErkJggg==',
+		// 选中图片链接地址
+		$checkedImg: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAFRUlEQVRYR9VZS2xUVRj+zr135s6d0hmnM6Gx0FJ6W0sDOwrUhYa6MDFBN8gjgPERE1CowbihC11oIq7UBIhgjCZaQAQ2ihsX1uiCQstKmlI7d6a0WEU6HWf6mN6Ze88xZ5xphj7uowygZzXJ/Of/v3v+5/kOwTIWY0wYHh7eRCltB9AK4DEAqwBUFNRNA/gdwG8A+gRB6K6vr+8lhFC35oibDUNDQ6sFQTgIYK8kklqvBHgkAkkkEAQCUtDGGEApg2Ey5AyGrAH+exTAaUrpiaampltO7ToCODAwEPZ6ve8SglcVmXgVr5AH5WZxsJksRUZnWcbwWTabfaelpSVhp8PWSiwW28kYO+GXSaRCESHY7rA2SRkwnTExo7NxxtihxsbGc1Y7ljTX3d0t1dXVHRMFHAhWiHlXlnPlTIbUlAmT4uTIyEhHe3u7sZj+Ra2OjY35M5nMOdlDtnFwxdgqJ0Cui8dqatqEnmOXFEXZVVNTMzPfxgKA/ORqa2svKrLwHAf3IBYHmdHpt6Ojo9vnn+QCgJqmnZQ9ZH9whYjyOnXpT2VA3t16jp1SVfVAqeRdGKLR6C5JJF+HA9J9c+tSMLm7E2mDx+QeVVXPFuXmABZKyY2qgBjxuCwh5QoDnjgTaXOCUrquqanpDtc7B1DTtE/8MjlQ6XcedwYl6L0p4+pNBUN3vEjOiJBEoMpvoL4qh81rMti0RockcCc6W5Mz+RI05+o8QE3T6ghBNBKUPE7r3NVhH7r6grg9KVlarq40sLc1hS31s44Q8jo5njJyjKFRVdWRIsCjfpkccXJ6XMGZvgC+u17pyGBR6NkNk9jTmnZU6Cd5IZ9lH6iq2kl444/FYjfDAXG1k/bV1eseXCnIfZvSth/G22Iibd5qaGhYQ+Lx+BaBsJ5wwD72euI+fPRT2NaAlcCbWxNoW2vv7kTaBGWkjWia1umXyft27uUJ0XG+GhMz9h9iBTDkN3F8x23bxCkkSycHeCFYIWz3eQXLk/lFU3D856p7Or3i5kNPTuAJNWOpazZLkZqmFznAX8MBcYNd/H3YHcKVYX9ZAG6un8Fb7UlLXYU4vE5isdh4JCiG7crLwW+qMT5tXVKcoo9UGDix87al+L/lxkzwE9RXhiSvXd/d92UNcqadlDOIvHCffnHMUpiX9r+SRtYxwJe6HkUmZx2nzuAhnyCOATp18eGLK/FH2uMUg6WcWxf/t5Pk/1BmHnihPvb8n/DY1PtCP+7kra5NIOyyk1Z3Oe7Dx/fY6g5vTeBxN63O7bDwVW8Al1xOMsWM2bZhEi+4HRYK8+BRv48cqVTs+ywvoF/0BPHDjRWuMvrpdVN4uS3lftziVjilIYqCFglKXruOUkR1Je7D6WvOBtY9G1OOJhiuuzCwZk2TqpwiKR35OXvwut1UU3psfMLhcXl1xIf4uHdu0qnym1gbyWJz3Ww+3pYx8p9UVfU1buuuS5Msy4OhSiH8MC9NyUma0HW9ucjbzL927pZEcvYhXzv3qqp6puipJS/uj6ywTxhXWWIj/PeUyWm6TxsaGvaXii4A2N/f75Vl+fzDoD50Xd+xfv36rCVA/meBPLoge8gzD4g8+l5RlJ2OyKMi+r6+Pk8oFOL0W56nKXfilNBvp5LJZEdra2tusSiwnUCj0ehuQsix+0FgAnijlIdZFkC+aXBwMCJJ0nuE4JUyUcCfG4bxdnNz87hdotmeYKmCAol+CMA+SSSr5pPoxS7Eu8EiJDpn/bsopcfLTqLP/8qSZ4inAGwsPEOsBlBs0FMAOJPPnyGuCYLw43KfIf4BPkS/ka8SWQ4AAAAASUVORK5CYII='
+	){
+	position: relative;
+	width: $width;
+	height: $height;
+	overflow: hidden;
+	input[type=radio]{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		outline: none;
+		opacity: 0;
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+  		-webkit-appearance: none;
+	}
+	.ui-radio__lbl{
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding-left: $labelWidth + 10;
+		width: 100%;
+		height: 100%;
+		line-height: $labelWidth;
+		z-index: 5;
+		outline: none;
+		&:before{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: $labelWidth;
+			height: 100%;
+			content: "";
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url($defImg);
+			outline: none;
+		}
+	}
+	input[type=radio]:checked +.ui-radio__lbl:before{
+		background-image: url($checkedImg);
+	}
+}
+
+/* @name: 多选样式 */
+@mixin ui-checkbox(
+		$width: 100%,			// 多选宽度
+		$height: 50px,			// 多选高度
+		$labelWidth: 50px,		// 多选图标宽度
+		// 默认图片链接地址
+		$defImg: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAABB0lEQVRYR+3YQUrDUBSF4f8+ipbQlnZQOk8odQntXDfgaqQLkG5GN1DnugUpLxmLA9satUh5T57gpNM7SMCbYeCQw5czugLgvZ8CK+ASGKR3DT574AG4KYpiI2VZzojxqZe5YffM4aTBakCIcPgO1J9hi8hcvPd3/cxdZ+eu2WYnX/84BOqvcJ8K7sbDzqBpuVOdJPm6PdapYJyMOq3S+yvz8nbECmp+jQlq9FLWBE1QK6DN2wZNUCugzdsGTVAroM3bBk1QK6DN2wZNUCugzdsGTVAroM3bBv+NYOsPmO0+AVdVdRFDeGzjEV2cW/ze9NOlP8Z4C1wBfe24lfl3YC0iyzzPn38ALC4qGpDWqzoAAAAASUVORK5CYII=',
+		// 选中图片链接地址
+		$checkedImg: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAACNElEQVRYR+3YT0sbQRgG8GfGaHSpYtQiiAdJED140ItYqAfRfIGepR9AvBWK9uw/ELz4DcSrnlsVpVBovXkqFN3EQykW0aRJmmw07sgEFzVm18nO6K6wOSaZvL888zIzOwQAdF3vBbAEYAJAC3/Pw1cGwA6AmVgsdkgSiUQfGPvxSqOtjQ0UlHhIA2AywLgwkcubaRAyQnRd32jW6DstTL2VVVT/b5jIFcxNDvz3ujXU4nVylenwJE/TpRwHss5IyFfpWZi/qRICoMzUBAnKpMfHBgm+yASLJWDvUCvvGGO9BTTVM9v/8exTnL8gmN9qx9FpuIwa7C5gNn7uD2Aljqvq6xjW3//xHlgNx1XDPXl8GEt5C7TD9XUWMRs/87YHOW5uqx36Tc9ZUYngnnwdlMUJAy+vgG8JDZQwvI0aqKP2y4KVkAqcMHBlL4L9Y61ce6DLwMfxM4QdTmeqcMLAybUuXF7dPgc4IVXihIGL2204+N10bymohlSNEwZmDIL5Lx04Pm+wRT4FThjIv+iEnB5NYXm3zfVS4nSgqGkvzhYJ5j4/TDIcYiiW7j+riq5zj512agLyH7ND3i2kClfTFN8FOCFV4lwD7ZJUjZMCWsjVrxH8PGnEUHcBU6Npx43/sX6r9nnNPeimiMyYACiTnnQPyhYXGR9MsUhKyrY62WJuxltT7PsLTH9fASeTyX5mmt/9eIlOKH1TPifxm37G2AKAOIBmN/2icEwWwDYh5FM0Gv11DfuH8hpADAE5AAAAAElFTkSuQmCC'
+	){
+	input[type=checkbox]{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		outline: none;
+		opacity: 0;
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+		-webkit-appearance: none;
+	}
+	.ui-checkbox__lbl{
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding-left: $labelWidth + 10;
+		width: 100%;
+		height: 100%;
+		line-height: $height;
+		z-index: 5;
+		outline: none;
+		&:before{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: $labelWidth;
+			height: $height;
+			content: "";
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url($defImg);
+			outline: none;
+		}
+	}
+	input[type=checkbox]:checked +.ui-checkbox__lbl:before{
+		background-image: url($checkedImg);
+	}
+}
+
+/* @name: 提示框 */
+@mixin ui-window(
+	){
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-color: rgba(0,0,0,.4);
+	z-index: 100000;
+	display: table;
+	.ui-window__middle{
+		@include centers;
+	}
+	.ui-windowCon{
+		position: relative;
+		margin: auto;
+		width: 250px;
+		border-radius: 3px;
+		overflow: hidden;
+		background-color: #fff;
+		box-shadow: 0px 0px 10px #888;
+		.ui-windowCon__header{
+			padding: 0 5px;
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			font-size: 16px;
+		}
+		.ui-windowCon__content{
+			padding: 10px 5px;
+			width: 100%;
+			min-height: 25px;
+			line-height: 25px;
+			text-align: center;
+			font-size: 14px;
+		}
+		.ui-windowCon__footer{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			border-top: solid 1px rgb(245,245,245);
+		}
+		.ui-windowCon__fbtn{
+			float: left;
+			width: 50%;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			color: #478aff;
+			font-weight: bold;
+			font-size: 15px;
+			&:first-child{
+				border-right: solid 1px rgb(245,245,245);
+			}
+		}
+	}
+}
