@@ -439,7 +439,7 @@
     .ui-window__middle{
         @include centers;
     }
-    .ui-windowCon{
+    .ui-window__main{
         position: relative;
         margin: auto;
         width: 250px;
@@ -447,7 +447,7 @@
         overflow: hidden;
         background-color: #fff;
         box-shadow: 0px 0px 10px #888;
-        .ui-windowCon__header{
+        .ui-window__header{
             padding: 0 5px;
             width: 100%;
             height: 40px;
@@ -455,7 +455,7 @@
             text-align: center;
             font-size: 16px;
         }
-        .ui-windowCon__content{
+        .ui-window__content{
             padding: 10px 5px;
             width: 100%;
             min-height: 25px;
@@ -463,13 +463,13 @@
             text-align: center;
             font-size: 14px;
         }
-        .ui-windowCon__footer{
+        .ui-window__footer{
             width: 100%;
             height: 40px;
             line-height: 40px;
             border-top: solid 1px #f5f5f5;
         }
-        .ui-windowCon__fbtn{
+        .ui-window__btn{
             float: left;
             width: 50%;
             height: 40px;
