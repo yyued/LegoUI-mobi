@@ -8,7 +8,7 @@ LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动
 
 1. 基于Lego Mobile基础样式。如果正在使用我们的前端工作流Gulp构建工具 [Generator Lego](https://github.com/duowan/generator-lego)，初始化时选择 `yo lego` mobi分支，则默认已有该基础样式，无需重复导入本库中_base.scss简化基础样式。如果没有使用我们Gulp构建工具，则需导入本库中_base.scss简化基础样式。
 
-2. 在需要使用UI库的sass文件中，导入本库sass文件。如：`@import "_lego";`
+2. 在需要使用UI库的sass文件中，导入本库sass文件。如：`@import "lego";`
 
 3. 在需要使用组件的样式中，导入组件mixin。如：
 	
