@@ -1,6 +1,6 @@
 # LegoUI for Mobile
 
-LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动端实际项目中较为通用常用的UI组件独立成库，SASS mixin的方式让使用者最大程度上灵活地描绘出自身理想的层叠样式。
+LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动端实际项目中较为通用常用的UI组件独立成库，Sass mixin的方式让使用者最大程度上灵活地描绘出自身理想的层叠样式。
 
 ---
 
