@@ -26,9 +26,14 @@ LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动
 	    
 ---
 
-###组件列表
+###UI组件列表
 * 头部
 * 列表
 * 表单及表单组件（开关，单选，多选等）
 * 按钮
 * 提示框
+
+---
+
+###交互组件
+详见 [LegoUI for Mobile](http://ued.yypm.com/legomobi/3.0.0/src/docs/home.html)。
