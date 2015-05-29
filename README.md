@@ -12,24 +12,17 @@ LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动
 
 3. 在需要使用组件的样式中，导入组件mixin。如：
 	
-		.ui-window{
-			@include ui-window();
+		.ui-header{
+			@include ui-header();
 		}
 		
 4. 配合基础html结构，组件基础html结构各有不同，详见 [LegoUI for Mobile]()。如：
 
-		<div class="ui-window">
-	       <div class="ui-window__middle">
-	           <div class="ui-windowCon">
-	               <div class="ui-windowCon__header">标题</div>
-	               <div class="ui-windowCon__content">内容</div>
-	               <div class="ui-windowCon__footer">
-	                   <a href="#"><div class="ui-windowCon__fbtn">取消</div></a>
-	                   <a href="#"><div class="ui-windowCon__fbtn">确定</div></a>
-	               </div>
-	           </div>
-	       </div>
-	    </div>
+		<header class="ui-header">
+	        <div class="ui-header__left"></div>
+	        头部样式
+	        <div class="ui-header__right"></div>
+	    </header>
 	    
 ---
 
