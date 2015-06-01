@@ -1,9 +1,53 @@
 /*!
  * @project : LegoUI-mobi
- * @version : 1.0.0
+ * @version : 1.1.0
  * @author  : 
  * @update  : 2015-05-28 9:05:52 am
  */
+
+@charset "utf-8";
+
+/* lego组件全局设置 */
+.ui-lego,
+.ui-lego:before,
+.ui-lego:after,
+.ui-lego *,
+.ui-lego *:before,
+.ui-lego *:after{
+    box-sizing: border-box;
+    // 样式重置
+    a{
+        text-decoration: none;
+        color: currentColor;
+    }
+    ul, li{
+        padding: 0;
+        margin: 0;
+        list-style: none outside none;
+    }
+}
+
+/*
+ * @name: 上下左右居中
+ * @ps: 需要设置父级display: table
+ */
+@mixin lego-centers{
+    text-align:center; 
+    display:table-cell; 
+    vertical-align:middle;
+}
+
+/*
+ * @name: 文字溢出显示省略号
+ * @ps: 需要设置宽度
+ */
+@mixin lego-ellipsis{
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
 
 /* @name: 头部样式 */
 @mixin ui-header(
@@ -107,7 +151,7 @@
             height: $height;
             line-height: $height;
             border-bottom: solid 1px rgba(245,245,245,1);
-            @include ellipsis();
+            @include lego-ellipsis();
         }
         li:last-child{
             border-bottom: none;
@@ -162,7 +206,7 @@
         $width: 100%,           // 按钮宽度
         $height: 40px,          // 按钮高度
         $paddingLR: 10px,       // 按钮左右间距
-        $border: none,          // 按钮边框
+        $border: solid 1px #ec185b, // 按钮边框
         $bgColor: #ec185b,      // 按钮背景色
         $fontColor: #fff,       // 按钮字体色
         $radius: 3px            // 按钮圆角
@@ -187,6 +231,12 @@
         border: $border;
         border-radius: $radius;
         content: "";
+    }
+    &:active{
+        color: $bgColor;
+        &:after{
+            background-color: #fff;
+        }
     }
 }
 
@@ -426,7 +476,7 @@
     }
 }
 
-/* @name: 提示框 */
+/* @name: 模态窗 */
 @mixin ui-window(){
     position: fixed;
     top: 0;
@@ -438,7 +488,7 @@
     z-index: 100000;
     display: table;
     .ui-window__middle{
-        @include centers;
+        @include lego-centers;
     }
     .ui-window__main{
         position: relative;
