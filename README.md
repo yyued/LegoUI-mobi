@@ -4,9 +4,9 @@ LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动
 
 ## 开始之前
 
-[Sass](https://github.com/sass/sass) 是一种CSS的开发工具，增加了规则、变量、混入、选择器、继承等等特性。 （[传送门](https://github.com/sass/sass)）
+[Sass](https://github.com/sass/sass) 是一种CSS的开发工具，增加了规则、变量、混入、选择器、继承等等特性。
 
-[SeaJS](https://github.com/seajs/seajs) 是一个遵循CommonJS规范的JavaScript模块加载框架。 （[传送门](https://github.com/seajs/seajs)）
+[SeaJS](https://github.com/seajs/seajs) 是一个遵循CommonJS规范的JavaScript模块加载框架。
 
 项目基于 `seajs` 和 `zepto` 进行开发，采用 `sass` 编译环境
 
