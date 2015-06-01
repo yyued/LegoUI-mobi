@@ -32,8 +32,8 @@ LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动
 
 ```html
 <body>
-...
-<script src="http://assets.dwstatic.com/mobile/src/js/main/seajs/sea-lego.js" id="seajsnode"></script>
+    ...
+    <script src="http://assets.dwstatic.com/mobile/src/js/main/seajs/sea-lego.js" id="seajsnode"></script>
 </body>
 ```
 
@@ -41,15 +41,15 @@ LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动
 
 ```javascript
 seajs.config({
-paths: {
-'legoPath': 'http://assets.dwstatic.com/mobile/src/js/',
-'modulePath': 'http://assets.dwstatic.com/legomobi/3.0.0/js/'
-},
-alias: {
-'zepto': 'legoPath/main/zepto/zepto.min.js',
-'touch': 'legoPath/main/zepto/zepto.touch.js',
-'iscroll': 'legoPath/module/iscroll/iscroll.js'
-}
+    paths: {
+        'legoPath': 'http://assets.dwstatic.com/mobile/src/js/',
+        'modulePath': 'http://assets.dwstatic.com/legomobi/3.0.0/js/'
+    },
+    alias: {
+        'zepto': 'legoPath/main/zepto/zepto.min.js',
+        'touch': 'legoPath/main/zepto/zepto.touch.js',
+        'iscroll': 'legoPath/module/iscroll/iscroll.js'
+    }
 });
 ```
 
@@ -59,13 +59,13 @@ alias: {
 
 ```html
 <script>
-seajs.use(['module/popup'], function(Popup) {
-var popup = new Popup('#popup',{
-hasBg: true,
-hasBgEvent: true,
-hasSelfEvent: true
-});
-});
+    seajs.use(['module/popup'], function(Popup) {
+        var popup = new Popup('#popup',{
+            hasBg: true,
+            hasBgEvent: true,
+            hasSelfEvent: true
+        });
+    });
 </script>
 ```
 
@@ -73,12 +73,12 @@ hasSelfEvent: true
 
 ```javascript
 define(function(require, exports, module) {
-var Popup = require('modulePath/popup');
-var popup = new Popup('#popup',{
-hasBg: true,
-hasBgEvent: true,
-hasSelfEvent: true
-});
+	var Popup = require('modulePath/popup');
+	var popup = new Popup('#popup',{
+        hasBg: true,
+        hasBgEvent: true,
+        hasSelfEvent: true
+    });
 });
 ```
 
@@ -132,7 +132,7 @@ hasSelfEvent: true
 
 ```scss
 .ui-btn{
-@include ui-btn();
+	@include ui-btn();
 }
 ```
 
@@ -148,7 +148,7 @@ html中使用，如：
 
 ```scss
 .ui-header{
-@include ui-header();
+	@include ui-header();
 }
 ```
 
@@ -156,9 +156,9 @@ html中使用，如：
 
 ```html
 <header class="ui-lego ui-header">
-<div class="ui-header__left"></div>
-头部样式
-<div class="ui-header__right"></div>
+    <div class="ui-header__left"></div>
+    头部样式
+    <div class="ui-header__right"></div>
 </header>
 ```
 
@@ -168,7 +168,7 @@ html中使用，如：
 
 ```scss
 .ui-list{
-@include ui-list();
+	@include ui-list();
 }
 ```	
 
@@ -176,48 +176,48 @@ html中使用，如：
 
 ```html
 <div class="ui-lego ui-list">
-<div class="ui-list__header">列表样式 1</div>
-<ul>
-<li>
-<a href="">item 1</a>
-</li>
-<li>
-<a href="">item 2</a>
-</li>
-<li>
-<a href="">item 3</a>
-</li>
-</ul>
+    <div class="ui-list__header">列表样式 1</div>
+    <ul>
+        <li>
+            <a href="">item 1</a>
+        </li>
+        <li>
+            <a href="">item 2</a>
+        </li>
+        <li>
+            <a href="">item 3</a>
+        </li>
+    </ul>
 </div>
 
 <div class="ui-lego ui-list">
-<div class="ui-list__header">列表样式 2</div>
-<ul>
-<li class="ui-list__arrow">
-<a href="">item 1</a>
-</li>
-<li class="ui-list__arrow">
-<a href="">item 2</a>
-</li>
-<li class="ui-list__arrow">
-<a href="">item 3</a>
-</li>
-</ul>
+    <div class="ui-list__header">列表样式 2</div>
+    <ul>
+        <li class="ui-list__arrow">
+            <a href="">item 1</a>
+        </li>
+        <li class="ui-list__arrow">
+            <a href="">item 2</a>
+        </li>
+        <li class="ui-list__arrow">
+            <a href="">item 3</a>
+        </li>
+    </ul>
 </div>
 
 <div class="ui-lego ui-list">
-<div class="ui-list__header">列表样式 3</div>
-<ul>
-<li class="ui-list__shape">
-<a href="">item 1<span class="_shape">2</span></a>
-</li>
-<li>
-<a href="">item 2</a>
-</li>
-<li>
-<a href="">item 3</a>
-</li>
-</ul>
+    <div class="ui-list__header">列表样式 3</div>
+    <ul>
+        <li class="ui-list__shape">
+            <a href="">item 1<span class="_shape">2</span></a>
+        </li>
+        <li>
+            <a href="">item 2</a>
+        </li>
+        <li>
+            <a href="">item 3</a>
+        </li>
+    </ul>
 </div>
 ```
 
@@ -228,22 +228,22 @@ html中使用，如：
 ```scss	
 /* 表单 */
 .ui-form{
-@include ui-form();
+	@include ui-form();
 }
 
 /* 开关 */
 .ui-switch{
-@include ui-switch();
+	@include ui-switch();
 }
 
 /* 单选 */
 .ui-radio{
-@include ui-radio();
+	@include ui-radio();
 }
 
 /* 复选 */
 .ui-checkbox{
-@include ui-checkbox();
+	@include ui-checkbox();
 }
 ```	
 
@@ -252,81 +252,81 @@ html中使用，如：
 ```html
 <div class="ui-lego ui-form">
 
-<div class="ui-form__header">表单样式 1</div>
+    <div class="ui-form__header">表单样式 1</div>
+    
+    <div class="ui-form__group">
+        <input type="text" placeholder="姓名">
+    </div>
 
-<div class="ui-form__group">
-<input type="text" placeholder="姓名">
-</div>
+    <div class="ui-form__group">
+        <input type="password" placeholder="密码">
+    </div>
 
-<div class="ui-form__group">
-<input type="password" placeholder="密码">
-</div>
+    <div class="ui-form__group ui-form__space">
+        <input type="text" placeholder="邮箱地址">
+    </div>
 
-<div class="ui-form__group ui-form__space">
-<input type="text" placeholder="邮箱地址">
-</div>
+    <div class="ui-form__group">
+        <input type="text" placeholder="手机号">
+    </div>
 
-<div class="ui-form__group">
-<input type="text" placeholder="手机号">
-</div>
+    <div class="ui-form__group">
+        <div class="ui-switch">
+            <input type="checkbox">
+            <div class="ui-switch__btn"></div>
+            <div class="ui-switch__lbl"></div>
+        </div>
+    </div>
 
-<div class="ui-form__group">
-<div class="ui-switch">
-<input type="checkbox">
-<div class="ui-switch__btn"></div>
-<div class="ui-switch__lbl"></div>
-</div>
-</div>
+    <div class="ui-form__group">
+        <div class="ui-radio">
+            <input type="radio" name="sex" checked>
+            <div class="ui-radio__lbl">男</div>
+        </div>
+    </div>
+    <div class="ui-form__group">
+        <div class="ui-radio">
+            <input type="radio" name="sex">
+            <div class="ui-radio__lbl">女</div>
+        </div>
+    </div>
 
-<div class="ui-form__group">
-<div class="ui-radio">
-<input type="radio" name="sex" checked>
-<div class="ui-radio__lbl">男</div>
-</div>
-</div>
-<div class="ui-form__group">
-<div class="ui-radio">
-<input type="radio" name="sex">
-<div class="ui-radio__lbl">女</div>
-</div>
-</div>
+    <div class="ui-form__group">
+        <div class="ui-checkbox">
+            <input type="checkbox" name="hobby" checked>
+            <div class="ui-checkbox__lbl">阅读</div>
+        </div>
+    </div>
+    <div class="ui-form__group">
+        <div class="ui-checkbox">
+            <input type="checkbox" name="hobby">
+            <div class="ui-checkbox__lbl">唱歌</div>
+        </div>
+    </div>
+    <div class="ui-form__group">
+        <div class="ui-checkbox">
+            <input type="checkbox" name="hobby">
+            <div class="ui-checkbox__lbl">跳舞</div>
+        </div>
+    </div>
 
-<div class="ui-form__group">
-<div class="ui-checkbox">
-<input type="checkbox" name="hobby" checked>
-<div class="ui-checkbox__lbl">阅读</div>
-</div>
-</div>
-<div class="ui-form__group">
-<div class="ui-checkbox">
-<input type="checkbox" name="hobby">
-<div class="ui-checkbox__lbl">唱歌</div>
-</div>
-</div>
-<div class="ui-form__group">
-<div class="ui-checkbox">
-<input type="checkbox" name="hobby">
-<div class="ui-checkbox__lbl">跳舞</div>
-</div>
-</div>
-
-<div class="ui-form__header">表单样式 2</div>
-<div class="ui-form__group2">
-<label>姓名</label>
-<input type="text" placeholder="请输入">
-</div>
-<div class="ui-form__group2">
-<label>密码</label>
-<input type="text" placeholder="请输入">
-</div>
-<div class="ui-form__group2 ui-form__space">
-<label>邮箱地址</label>
-<input type="text" placeholder="请输入">
-</div>
-<div class="ui-form__group2">
-<label>手机号</label>
-<input type="text" placeholder="请输入">
-</div>
+    <div class="ui-form__header">表单样式 2</div>
+    <div class="ui-form__group2">
+        <label>姓名</label>
+        <input type="text" placeholder="请输入">
+    </div>
+    <div class="ui-form__group2">
+        <label>密码</label>
+        <input type="text" placeholder="请输入">
+    </div>
+    <div class="ui-form__group2 ui-form__space">
+        <label>邮箱地址</label>
+        <input type="text" placeholder="请输入">
+    </div>
+    <div class="ui-form__group2">
+        <label>手机号</label>
+        <input type="text" placeholder="请输入">
+    </div>
 </div>			
 ```
 
@@ -336,7 +336,7 @@ html中使用，如：
 
 ```scss	
 .ui-window{
-@include ui-window();
+	@include ui-window();
 }
 ```	
 
@@ -344,16 +344,16 @@ html中使用，如：
 
 ```html
 <div class="ui-lego ui-window">
-<div class="ui-window__middle">
-<div class="ui-window">
-<div class="ui-window__header">标题</div>
-<div class="ui-window__content">内容</div>
-<div class="ui-window__footer">
-<a href="#"><div class="ui-window__btn">取消</div></a>
-<a href="#"><div class="ui-window__btn">确定</div></a>
-</div>
-</div>
-</div>
+    <div class="ui-window__middle">
+        <div class="ui-window">
+            <div class="ui-window__header">标题</div>
+            <div class="ui-window__content">内容</div>
+            <div class="ui-window__footer">
+                <a href="#"><div class="ui-window__btn">取消</div></a>
+                <a href="#"><div class="ui-window__btn">确定</div></a>
+            </div>
+        </div>
+    </div>
 </div>
 ```	
 
