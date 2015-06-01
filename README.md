@@ -16,7 +16,7 @@ LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动
 		
 3. 配合基础html结构，组件基础html结构各有不同，详见 [LegoUI for Mobile](http://ued.yypm.com/legomobi/3.0.0/src/docs/home.html)。如：
 
-		<header class="ui-header">
+		<header class="ui-lego ui-header">
 	        <div class="ui-header__left"></div>
 	        头部样式
 	        <div class="ui-header__right"></div>
