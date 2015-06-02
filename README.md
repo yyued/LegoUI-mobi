@@ -1,4 +1,4 @@
-# [LegoUI for Mobile](http://ued.yypm.com/legomobi/3.0.0/src/docs/home.html)
+# [LegoUI for Mobile](http://ued.yypm.com/legomobi/3)
 
 LegoUI for Mobile 是一套轻量级为移动端而生的前端UI库。把移动端实际项目中较为通用常用的UI组件独立成库，Sass mixin的方式让使用者最大程度上灵活地描绘出自身理想的层叠样式。
 
@@ -82,49 +82,49 @@ define(function(require, exports, module) {
 
 ## 说明文档
 
-低调、绝不华丽的文档展示，[这里走起](http://ued.yypm.com/legomobi/3.0.0/src/docs/home.html)
+低调、绝不华丽的文档展示，[这里走起](http://ued.yypm.com/legomobi/3)
 
 ## 交互组件
 
-### [1.Tab](http://ued.yypm.com/legomobi/3.0.0/src/docs/tab.html)
+### [1.Tab](http://ued.yypm.com/legomobi/3/tab.html)
 
-带过渡效果的Tab面板切换组件，支持手势滑动，[详情走起](http://ued.yypm.com/legomobi/3.0.0/src/docs/tab.html)
+带过渡效果的Tab面板切换组件，支持手势滑动，[详情走起](http://ued.yypm.com/legomobi/3/tab.html)
 
-### [2.Nav](http://ued.yypm.com/legomobi/3.0.0/src/docs/nav.html)
+### [2.Nav](http://ued.yypm.com/legomobi/3/nav.html)
 
-可以横向滚动的导航条组件，支持缓动、循环、定位，[详情走起](http://ued.yypm.com/legomobi/3.0.0/src/docs/nav.html)
+可以横向滚动的导航条组件，支持缓动、循环、定位，[详情走起](http://ued.yypm.com/legomobi/3/nav.html)
 
-### [3.Falls](http://ued.yypm.com/legomobi/3.0.0/src/docs/falls.html)
+### [3.Falls](http://ued.yypm.com/legomobi/3/falls.html)
 
-两列瀑布流布局实现的组件，支持上拉加载更多，下拉刷新，[详情走起](http://ued.yypm.com/legomobi/3.0.0/src/docs/falls.html)
+两列瀑布流布局实现的组件，支持上拉加载更多，下拉刷新，[详情走起](http://ued.yypm.com/legomobi/3/falls.html)
 
-### [4.Toast](http://ued.yypm.com/legomobi/3.0.0/src/docs/toast.html)
+### [4.Toast](http://ued.yypm.com/legomobi/3/toast.html)
 
-集成了定制文字和图片的仿原生消息提示框组件，[详情走起](http://ued.yypm.com/legomobi/3.0.0/src/docs/toast.html)
+集成了定制文字和图片的仿原生消息提示框组件，[详情走起](http://ued.yypm.com/legomobi/3/toast.html)
 
-### [5.Popup](http://ued.yypm.com/legomobi/3.0.0/src/docs/popup.html)
+### [5.Popup](http://ued.yypm.com/legomobi/3/popup.html)
 
-弹出层组件，可以定制内容及控制方式，[详情走起](http://ued.yypm.com/legomobi/3.0.0/src/docs/popup.html)
+弹出层组件，可以定制内容及控制方式，[详情走起](http://ued.yypm.com/legomobi/3/popup.html)
 
-### [6.SlideMenu](http://ued.yypm.com/legomobi/3.0.0/src/docs/slidemenu.html)
+### [6.SlideMenu](http://ued.yypm.com/legomobi/3/slidemenu.html)
 
-抽屉式的侧边菜单栏，支持手势事件，[详情走起](http://ued.yypm.com/legomobi/3.0.0/src/docs/slidemenu.html)
+抽屉式的侧边菜单栏，支持手势事件，[详情走起](http://ued.yypm.com/legomobi/3/slidemenu.html)
 
-### [7.PopupMenu](http://ued.yypm.com/legomobi/3.0.0/src/docs/popupmenu.html)
+### [7.PopupMenu](http://ued.yypm.com/legomobi/3/popupmenu.html)
 
-仿ios原生弹出菜单组组件，可以定制内容及控制方式，[详情走起](http://ued.yypm.com/legomobi/3.0.0/src/docs/popupmenu.html)
+仿ios原生弹出菜单组组件，可以定制内容及控制方式，[详情走起](http://ued.yypm.com/legomobi/3/popupmenu.html)
 
-### [8.Music](http://ued.yypm.com/legomobi/3.0.0/src/docs/music.html)
+### [8.Music](http://ued.yypm.com/legomobi/3/music.html)
 
-支持背景音乐播放的组件，提供默认的控制按钮以及播放控制，[详情走起](http://ued.yypm.com/legomobi/3.0.0/src/docs/music.html)
+支持背景音乐播放的组件，提供默认的控制按钮以及播放控制，[详情走起](http://ued.yypm.com/legomobi/3/music.html)
 
-### [9.Video](http://ued.yypm.com/legomobi/3.0.0/src/docs/video.html)
+### [9.Video](http://ued.yypm.com/legomobi/3/video.html)
 
-快速插入视频的组件，通过视频区域控制控制的播放和暂停，[详情走起](http://ued.yypm.com/legomobi/3.0.0/src/docs/video.html)
+快速插入视频的组件，通过视频区域控制控制的播放和暂停，[详情走起](http://ued.yypm.com/legomobi/3/video.html)
 
 ## UI组件
 
-### [1.按钮](http://ued.yypm.com/legomobi/3.0.0/src/docs/button.html)
+### [1.按钮](http://ued.yypm.com/legomobi/3/button.html)
 
 在需要使用组件的样式中，导入组件mixin。如：
 
@@ -140,7 +140,7 @@ html中使用，如：
 <a class="ui-lego ui-btn">按钮样式</a>
 ```
 
-### [2.头部](http://ued.yypm.com/legomobi/3.0.0/src/docs/header.html)
+### [2.头部](http://ued.yypm.com/legomobi/3/header.html)
 
 在需要使用组件的样式中，导入组件mixin。如：
 
@@ -160,7 +160,7 @@ html中使用，如：
 </header>
 ```
 
-### [3.列表](http://ued.yypm.com/legomobi/3.0.0/src/docs/list.html)
+### [3.列表](http://ued.yypm.com/legomobi/3/list.html)
 
 在需要使用组件的样式中，导入组件mixin。如
 
@@ -219,7 +219,7 @@ html中使用，如：
 </div>
 ```
 
-### [4.表单及表单组件（开关，单选，多选等）](http://ued.yypm.com/legomobi/3.0.0/src/docs/form.html)
+### [4.表单及表单组件（开关，单选，多选等）](http://ued.yypm.com/legomobi/3/form.html)
 
 在需要使用组件的样式中，导入组件mixin。如
 
@@ -328,7 +328,7 @@ html中使用，如：
 </div>			
 ```
 
-### [5.模态窗](http://ued.yypm.com/legomobi/3.0.0/src/docs/window.html)
+### [5.模态窗](http://ued.yypm.com/legomobi/3/window.html)
 
 在需要使用组件的样式中，导入组件mixin。如：
 
