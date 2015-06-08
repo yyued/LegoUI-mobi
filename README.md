@@ -80,6 +80,9 @@ define(function(require, exports, module) {
 });
 ```
 
+### 3.使用snippets代码片段
+如果你使用的是Sublime Text，可以通过 [Lego-Snippets Github](https://github.com/duowan/Lego-Snippets) 把代码片段安装到 Packages，然后就可以使用 `m-{{组件名}}` + tab键 的快捷方式直接插入代码片段
+
 ## 说明文档
 
 低调、绝不华丽的文档展示，[这里走起](http://ued.yypm.com/legomobi/3)
